@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "TextureButton",
+"class": "Card",
+"language": "GDScript",
+"path": "res://src/main/Card.gd"
+} ]
+_global_script_class_icons={
+"Card": ""
+}
+
+[application]
+
+config/name="tictactoe"
+run/main_scene="res://src/main/Game.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+GameManager="*res://src/main/autoLoad/GameManager.gd"
+
+[display]
+
+window/size/width=640
+window/size/height=480
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
